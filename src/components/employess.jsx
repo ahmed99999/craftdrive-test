@@ -16,14 +16,12 @@ class Employees extends Component {
         this.setState({ employees, isLoaded: true });
     }
 
-    handelEmployeeDetails = employee => {
-        console.log(employee);
-        this.setState({ currentEmployee: employee });
+    handelEmployeeDetails = currentEmployee => {
+        this.setState({ currentEmployee });
     };
 
     render() {
         const { employees, isLoaded, currentEmployee } = this.state;
-        console.log(currentEmployee);
         return (
             <React.Fragment >
                 {!isLoaded && <Loading />}
@@ -42,7 +40,7 @@ class Employees extends Component {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            {currentEmployee && <EmployeeDetails employee={currentEmployee} />}
+                            {currentEmployee && <EmployeeDetails currentEmployee={currentEmployee} />}
                         </div>
                     </div>}
             </React.Fragment>

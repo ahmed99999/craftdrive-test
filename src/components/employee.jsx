@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Employee = ({ employee, handelEmployeeDetails }) => {
     return (
         <div>
             <a className="list-group-item list-group-item-action active"
                 data-toggle="list" role="tab"
-                onClick={(employee) => handelEmployeeDetails(employee)}>
+                onClick={() => handelEmployeeDetails(employee)}>
                 {`${employee.first_name} ${employee.last_name}`}
             </a>
         </div>
