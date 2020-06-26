@@ -11,7 +11,7 @@ axios.interceptors.response.use(null, err => {
     return Promise.reject(err);
 });
 
-axios.defaults.baseURL = config.apiEndPoint;
+// axios.defaults.baseURL = config.apiEndPoint;
 
 export default {
     get: axios.get,
